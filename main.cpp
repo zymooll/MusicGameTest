@@ -73,7 +73,7 @@ void select() {
 }
 void game(int id) {
 	gamestart = false;
-	ifstream loadfile(musiclist[id] + ".mgt", ios::in);
+	ifstream loadfile("song/"+musiclist[id] + ".mgt", ios::in);
 	loadfile >> bpm >>gamemap;
 	thread th_input_E(input_E);
 	thread th_input_F(input_F);
